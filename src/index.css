@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+
+  /* Ink navy: main brand colour */
+  --color-ink-950: #0e1230;
+  --color-ink-900: #151a40;
+  --color-ink-800: #1f2658;
+  --color-ink-700: #2d3776;
+
+  /* Lavender: soft highlights, active states */
+  --color-lavender-50: #f6f4fe;
+  --color-lavender-100: #eeebfb;
+  --color-lavender-300: #c4bbf0;
+  --color-lavender-500: #8e7fe0;
+  --color-lavender-600: #7565d1;
+
+  /* Champagne: premium accent */
+  --color-champagne-100: #faf1de;
+  --color-champagne-300: #ebd7a8;
+  --color-champagne-500: #d9b96e;
+
+  /* Coral: calls to action */
+  --color-coral-400: #ff8576;
+  --color-coral-500: #f26b5b;
+  --color-coral-600: #e0513f;
+
+  /* Ivory: page background */
+  --color-ivory: #fbf8f3;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-ivory font-sans text-ink-900 antialiased;
+  }
+}
