@@ -88,7 +88,7 @@ export default function Customers() {
             <table className="w-full text-left text-sm">
               <thead className="bg-[#F5F7F1] text-gray-600">
                 <tr>
-                  <th className="px-5 py-4 font-semibold">#</th>        
+                  <th className="px-5 py-4 font-semibold">#</th>
                   <th className="px-5 py-4 font-semibold">Phone</th>
                   <th className="px-5 py-4 font-semibold">Marketing</th>
                 </tr>
@@ -102,17 +102,16 @@ export default function Customers() {
                   >
                     <td className="px-5 py-4 text-gray-500">
                       {index + 1}
-                    </td>                  
+                    </td>
                     <td className="px-5 py-4 text-gray-600">
                       {customer.phone || "—"}
                     </td>
                     <td className="px-5 py-4">
                       <span
-                        className={`rounded-full px-3 py-1 text-xs font-semibold ${
-                          customer.marketingOptIn
+                        className={`rounded-full px-3 py-1 text-xs font-semibold ${customer.marketingOptIn
                             ? "bg-green-100 text-green-700"
                             : "bg-gray-100 text-gray-600"
-                        }`}
+                          }`}
                       >
                         {customer.marketingOptIn ? "Opted In" : "Not Opted In"}
                       </span>

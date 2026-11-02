@@ -50,16 +50,6 @@ export default function Welcome({ onContinue }) {
         </p>
       </div>
 
-      {/* Localhost Warning */}
-      {isLocalhost && (
-        <div className="mt-4">
-          <Alert type="warning">
-            This QR points to localhost, so it only works on this computer.
-            To test it on a phone, set VITE_PUBLIC_URL in your .env file
-            to your PC's network address.
-          </Alert>
-        </div>
-      )}
 
       {/* Continue Button */}
       <button
