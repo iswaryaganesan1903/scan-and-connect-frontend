@@ -21,6 +21,8 @@ import ProtectedRoute from "./auth/ProtectedRoute.jsx";
 import Customers from "./pages/Customers.jsx";
 import Payments from "./pages/Payments.jsx";
 import Advertisements from "./pages/Advertisements.jsx";
+import ThankYou from "./pages/ThankYou.jsx";
+
 
 function CustomerFlow() {
   const [step, setStep] = useState(
@@ -28,6 +30,7 @@ function CustomerFlow() {
       ? "dashboard"
       : "welcome"
   );
+
   const [bill, setBill] = useState(null);
   const [customer, setCustomer] = useState(null);
   const [result, setResult] = useState(null);
@@ -37,6 +40,11 @@ function CustomerFlow() {
     setCustomer(null);
     setResult(null);
     setStep("welcome");
+  }
+
+  // Show Thank You page separately
+  if (step === "thankyou") {
+    return <ThankYou />;
   }
 
   return (
@@ -66,7 +74,12 @@ function CustomerFlow() {
             onBack={() => setStep("dashboard")}
             onResult={(r) => {
               setResult(r);
-              setStep("result");
+
+              if (r?.status === "SUCCESS") {
+                setStep("thankyou");
+              } else {
+                setStep("result");
+              }
             }}
           />
         )}
@@ -86,6 +99,7 @@ function CustomerFlow() {
     </div>
   );
 }
+
 
 export default function App() {
   const navigate = useNavigate();
@@ -114,7 +128,7 @@ export default function App() {
         />
         <Route path="customers" element={<Customers />} />
         <Route path="payments" element={<Payments />} />
-        <Route path="advertisements" element={<Advertisements/>}/>
+        <Route path="advertisements" element={<Advertisements />} />
       </Route>
 
       {/* Customer flow */}

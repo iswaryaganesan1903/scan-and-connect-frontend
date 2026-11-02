@@ -139,6 +139,7 @@ export default function AdminDashboard() {
             <thead className="bg-[#F5F7F1] text-gray-600">
               <tr>
                 <th className="px-6 py-4">Payment ID</th>
+                <th className="px-6 py-4">Date & Time</th>
                 <th className="px-6 py-4">Phone</th>
                 <th className="px-6 py-4">Amount</th>
                 <th className="px-6 py-4">Method</th>
@@ -152,6 +153,11 @@ export default function AdminDashboard() {
                   <tr key={payment.paymentId} className="hover:bg-[#F5F7F1]">
                     <td className="px-6 py-4 font-medium text-gray-700">
                       #{payment.paymentId}
+                    </td>
+                    <td className="px-6 py-4 text-gray-600">
+                      {payment.createdAt
+                        ? new Date(payment.createdAt).toLocaleString("en-IN")
+                        : "Not available"}
                     </td>
 
                     <td className="px-6 py-4 text-gray-600">
@@ -168,8 +174,8 @@ export default function AdminDashboard() {
 
                     <td className="px-6 py-4">
                       <span className={`rounded-full px-3 py-1 text-xs font-semibold ${payment.status === "SUCCESS"
-                          ? "bg-green-100 text-green-700"
-                          : "bg-yellow-100 text-yellow-700"
+                        ? "bg-green-100 text-green-700"
+                        : "bg-yellow-100 text-yellow-700"
                         }`}>
                         {payment.status}
                       </span>
@@ -178,7 +184,7 @@ export default function AdminDashboard() {
                 ))
               ) : (
                 <tr>
-                  <td colSpan="5" className="px-6 py-8 text-center text-gray-500">
+                  <td colSpan="6" className="px-6 py-8 text-center text-gray-500">
                     No payments found.
                   </td>
                 </tr>

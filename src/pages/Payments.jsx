@@ -169,6 +169,7 @@ export default function Payments() {
               <thead className="bg-[#F5F7F1] text-gray-600">
                 <tr>
                   <th className="px-5 py-4 font-semibold">Payment ID</th>
+                  <th className="px-5 py-4 font-semibold">Date & Time</th>
                   <th className="px-5 py-4 font-semibold">Customer Phone</th>
                   <th className="px-5 py-4 font-semibold">Amount</th>
                   <th className="px-5 py-4 font-semibold">Method</th>
@@ -184,6 +185,11 @@ export default function Payments() {
                   >
                     <td className="px-5 py-4 font-medium text-gray-700">
                       #{payment.paymentId}
+                    </td>
+                    <td className="px-5 py-4 text-gray-600">
+                      {payment.createdAt
+                        ? new Date(payment.createdAt).toLocaleString("en-IN")
+                        : "—"}
                     </td>
 
                     <td className="px-5 py-4 text-gray-600">

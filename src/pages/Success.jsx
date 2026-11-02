@@ -103,10 +103,10 @@ export default function Success({ customer, result, onDone }) {
         {/* Action */}
         <div className="px-6 py-7">
           <button
-            className="w-full rounded-xl bg-[#174D38] px-6 py-3.5 font-semibold text-white shadow-md transition hover:bg-[#245D43] active:scale-[0.98] disabled:cursor-not-allowed"
+            className="w-full rounded-xl bg-[#174D38] px-6 py-3.5 font-semibold text-white shadow-md transition hover:bg-[#245D43] active:scale-[0.98]"
             onClick={onDone}
           >
-            Start a New Bill
+            Done
           </button>
 
           <p className="mt-4 text-center text-xs text-gray-400">
