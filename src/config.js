@@ -6,7 +6,7 @@ export const SHOP = {
 
 // Backend address. To test from a phone, create a file named .env in the project
 // root containing:  VITE_API_URL=http://YOUR_PC_IP:8089
-export const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8089";
+export const API_BASE_URL = import.meta.env.VITE_API_URL || "https://scan-and-connect-backend.onrender.com";
 
 // The address the QR code opens. A phone cannot open "localhost", so for phone
 // testing put this in .env:  VITE_PUBLIC_URL=http://YOUR_PC_IP:5173
