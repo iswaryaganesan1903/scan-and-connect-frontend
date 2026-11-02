@@ -154,10 +154,10 @@ export default function AdminDashboard() {
                     <td className="px-6 py-4 font-medium text-gray-700">
                       #{payment.paymentId}
                     </td>
-                    <td className="px-6 py-4 text-gray-600">
+                    <td className="px-5 py-4 text-gray-600">
                       {payment.createdAt
                         ? new Date(payment.createdAt).toLocaleString("en-IN")
-                        : "Not available"}
+                        : "—"}
                     </td>
 
                     <td className="px-6 py-4 text-gray-600">
