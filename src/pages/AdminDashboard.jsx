@@ -149,10 +149,10 @@ export default function AdminDashboard() {
 
             <tbody className="divide-y divide-[#E3E9DF]">
               {allPayments.length > 0 ? (
-                [...allPayments].reverse().slice(0, 5).map((payment) => (
+                [...allPayments].reverse().slice(0, 5).map((payment, index) => (
                   <tr key={payment.paymentId} className="hover:bg-[#F5F7F1]">
                     <td className="px-6 py-4 font-medium text-gray-700">
-                      #{payment.paymentId}
+                      {index+1}
                     </td>
                     <td className="px-5 py-4 text-gray-600">
                       {payment.createdAt
