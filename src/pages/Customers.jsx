@@ -64,7 +64,7 @@ export default function Customers() {
 
           <input
             type="text"
-            placeholder="Search name, phone or email..."
+            placeholder="Search name, phone..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm outline-none transition focus:border-[#174D38] focus:ring-2 focus:ring-green-100 sm:max-w-xs"
