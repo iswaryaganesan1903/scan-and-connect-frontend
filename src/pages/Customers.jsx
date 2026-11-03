@@ -88,7 +88,7 @@ export default function Customers() {
             <table className="w-full text-left text-sm">
               <thead className="bg-[#F5F7F1] text-gray-600">
                 <tr>
-                  <th className="px-5 py-4 font-semibold">#</th>
+                  <th className="px-5 py-4 font-semibold">Id</th>
                   <th className="px-5 py-4 font-semibold">Phone</th>
                   <th className="px-5 py-4 font-semibold">Marketing</th>
                 </tr>
