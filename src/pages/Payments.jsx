@@ -178,13 +178,13 @@ export default function Payments() {
               </thead>
 
               <tbody className="divide-y divide-gray-100">
-                {filteredPayments.map((payment) => (
+                {filteredPayments.map((payment, index) => (
                   <tr
                     key={payment.paymentId}
                     className="transition hover:bg-[#F8FAF6]"
                   >
                     <td className="px-5 py-4 font-medium text-gray-700">
-                      #{payment.paymentId}
+                      {index + 1}
                     </td>
                     <td className="px-5 py-4 text-gray-600">
                       {payment.createdAt
